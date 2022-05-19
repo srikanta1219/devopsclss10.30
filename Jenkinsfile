@@ -1,17 +1,24 @@
 pipeline {
    agent any
-   
+   tools {
+     maven "maven"  
+   }
    stages {
-      stage('Bibhu Stage') {
+      stage('Git Checkout') {
          steps {
-            echo " hello Bibhu "   
+            git ''https://github.com/srikanta1219/devopsclss10.30.git'   
          }
       }
     
-    stage ('Lima stage'){
+    stage ('Maven Goal'){
       steps {
-         echo "Hello Lima" 
+         sh "mvn clean install package    " 
       }    
     }
  }
+     post {
+        always {
+          cleanWs()
+        }
+    }
 }
