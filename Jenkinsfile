@@ -2,13 +2,13 @@ pipeline {
    agent any
    
    stages {
-      stage('First Stage') {
+      stage('Bibhu Stage') {
          steps {
             echo "checkout complete hello world"   
          }
       }
     
-    stage ('second stage'){
+    stage ('Lima stage'){
       steps {
          echo "this is second stage" 
       }    
