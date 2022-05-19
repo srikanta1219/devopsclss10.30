@@ -4,13 +4,13 @@ pipeline {
    stages {
       stage('Bibhu Stage') {
          steps {
-            echo "checkout complete hello world"   
+            echo " hello Bibhu "   
          }
       }
     
     stage ('Lima stage'){
       steps {
-         echo "this is second stage" 
+         echo "Hello Lima" 
       }    
     }
  }
